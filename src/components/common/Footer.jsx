@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { COMPANY, NAV_LINKS, SERVICES } from '../../utils/constants';
+import logo from '../../assets/logo.png';
 
 // Social Icons
 const FacebookIcon = () => (
@@ -45,7 +46,8 @@ const Footer = () => {
     {
       title: 'Services',
       links: [
-        { name: 'Hardware Repair', path: '/services/hardware-repair' },
+        { name: 'IT Infrastructure', path: '/services/hardware-repair' },
+        { name: 'Home Appliances', path: '/services/home-appliances' },
         { name: 'Software Development', path: '/services/software-development' },
       ],
     },
@@ -65,9 +67,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] flex items-center justify-center">
-                <span className="text-white font-bold text-xl">P</span>
-              </div>
+              <img
+                src={logo}
+                alt="Pratibhaviora Logo"
+                className="h-10 w-auto"
+              />
               <div>
                 <h3 className="font-bold text-lg text-[var(--color-text-primary)]">
                   Pratibhaviora
@@ -80,7 +84,7 @@ const Footer = () => {
             <p className="text-[var(--color-text-secondary)] text-sm mb-6">
               {COMPANY.description}
             </p>
-            
+
             {/* Social Links */}
             <div className="flex gap-3">
               {socialLinks.map((social) => (

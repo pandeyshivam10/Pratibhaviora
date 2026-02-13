@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useTheme } from '../../context/ThemeContext';
 import { NAV_LINKS, COMPANY } from '../../utils/constants';
 import Button from './Button';
+import logo from '../../assets/logo.png';
 
 // Icons
 const MenuIcon = () => (
@@ -77,11 +78,10 @@ const Navbar = () => {
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled 
-            ? 'bg-[var(--color-bg-primary)]/95 backdrop-blur-md shadow-lg' 
-            : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+          ? 'bg-[var(--color-bg-primary)]/95 backdrop-blur-md shadow-lg'
+          : 'bg-transparent'
+          }`}
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.5 }}
@@ -90,14 +90,16 @@ const Navbar = () => {
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] flex items-center justify-center">
-                <span className="text-white font-bold text-xl">P</span>
-              </div>
+              <img
+                src={logo}
+                alt="Pratibhaviora Logo"
+                className="h-10 w-auto"
+              />
               <div className="hidden sm:block">
-                <h1 className="font-bold text-lg text-[var(--color-text-primary)]">
+                <h1 className={`font-bold text-lg ${isScrolled ? 'text-[var(--color-text-primary)]' : 'text-white'}`}>
                   Pratibhaviora
                 </h1>
-                <p className="text-xs text-[var(--color-text-secondary)]">
+                <p className={`text-xs ${isScrolled ? 'text-[var(--color-text-secondary)]' : 'text-white/80'}`}>
                   {COMPANY.tagline}
                 </p>
               </div>
@@ -114,11 +116,12 @@ const Navbar = () => {
                       onMouseLeave={() => setActiveDropdown(null)}
                     >
                       <button
-                        className={`flex items-center gap-1 py-2 font-medium transition-colors ${
-                          isActive(link.path)
-                            ? 'text-[var(--color-primary)]'
-                            : 'text-[var(--color-text-primary)] hover:text-[var(--color-primary)]'
-                        }`}
+                        className={`flex items-center gap-1 py-2 font-medium transition-colors ${isActive(link.path)
+                          ? 'text-[var(--color-primary)]'
+                          : isScrolled
+                            ? 'text-[var(--color-text-primary)] hover:text-[var(--color-primary)]'
+                            : 'text-white hover:text-white/80'
+                          }`}
                       >
                         {link.name}
                         <motion.span
@@ -142,11 +145,10 @@ const Navbar = () => {
                               <Link
                                 key={child.path}
                                 to={child.path}
-                                className={`block px-4 py-3 transition-colors ${
-                                  isActive(child.path)
-                                    ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
-                                    : 'text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)]'
-                                }`}
+                                className={`block px-4 py-3 transition-colors ${isActive(child.path)
+                                  ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
+                                  : 'text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)]'
+                                  }`}
                               >
                                 {child.name}
                               </Link>
@@ -158,11 +160,12 @@ const Navbar = () => {
                   ) : (
                     <Link
                       to={link.path}
-                      className={`py-2 font-medium transition-colors ${
-                        isActive(link.path)
-                          ? 'text-[var(--color-primary)]'
-                          : 'text-[var(--color-text-primary)] hover:text-[var(--color-primary)]'
-                      }`}
+                      className={`py-2 font-medium transition-colors ${isActive(link.path)
+                        ? 'text-[var(--color-primary)]'
+                        : isScrolled
+                          ? 'text-[var(--color-text-primary)] hover:text-[var(--color-primary)]'
+                          : 'text-white hover:text-white/80'
+                        }`}
                     >
                       {link.name}
                     </Link>
@@ -270,11 +273,10 @@ const Navbar = () => {
                                   <Link
                                     key={child.path}
                                     to={child.path}
-                                    className={`block px-4 py-2 rounded-lg transition-colors ${
-                                      isActive(child.path)
-                                        ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
-                                        : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-secondary)]'
-                                    }`}
+                                    className={`block px-4 py-2 rounded-lg transition-colors ${isActive(child.path)
+                                      ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
+                                      : 'text-[var(--color-text-secondary)] hover:bg-[var(--color-bg-secondary)]'
+                                      }`}
                                   >
                                     {child.name}
                                   </Link>
@@ -286,11 +288,10 @@ const Navbar = () => {
                       ) : (
                         <Link
                           to={link.path}
-                          className={`block px-4 py-3 rounded-lg font-medium transition-colors ${
-                            isActive(link.path)
-                              ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
-                              : 'text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)]'
-                          }`}
+                          className={`block px-4 py-3 rounded-lg font-medium transition-colors ${isActive(link.path)
+                            ? 'bg-[var(--color-primary)]/10 text-[var(--color-primary)]'
+                            : 'text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)]'
+                            }`}
                         >
                           {link.name}
                         </Link>

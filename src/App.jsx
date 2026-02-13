@@ -7,6 +7,7 @@ import WhatsAppButton from './components/common/WhatsAppButton';
 import ScrollToTop from './components/common/ScrollToTop';
 import Home from './pages/Home';
 import HardwareRepairPage from './pages/HardwareRepairPage';
+import HomeAppliancePage from './pages/HomeAppliancePage';
 import SoftwareDevelopmentPage from './pages/SoftwareDevelopmentPage';
 import About from './pages/About';
 import Contact from './pages/Contact';
@@ -15,11 +16,11 @@ import './styles/index.css';
 // Scroll to top on route change
 const ScrollToTopOnNav = () => {
   const { pathname } = useLocation();
-  
+
   if (typeof window !== 'undefined') {
     window.scrollTo(0, 0);
   }
-  
+
   return null;
 };
 
@@ -32,6 +33,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
         <Route path="/services/hardware-repair" element={<HardwareRepairPage />} />
+        <Route path="/services/home-appliances" element={<HomeAppliancePage />} />
         <Route path="/services/software-development" element={<SoftwareDevelopmentPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />

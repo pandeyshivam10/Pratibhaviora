@@ -16,6 +16,13 @@ const CodeIcon = () => (
   </svg>
 );
 
+const HomeIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+  </svg>
+);
+
 const ArrowRightIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -28,6 +35,11 @@ const services = [
     key: 'hardwareRepair',
     icon: <WrenchIcon />,
     data: SERVICES.hardwareRepair,
+  },
+  {
+    key: 'homeAppliances',
+    icon: <HomeIcon />,
+    data: SERVICES.homeAppliances,
   },
   {
     key: 'softwareDevelopment',
@@ -54,12 +66,12 @@ const Services = () => {
             Our <span className="gradient-text">Services</span>
           </h2>
           <p className="text-lg text-[var(--color-text-secondary)]">
-            Comprehensive technology solutions for all your hardware and software needs
+            Complete technical support across IT infrastructure, home appliances, and modern software development
           </p>
         </motion.div>
 
         {/* Service Cards */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.key}
@@ -80,7 +92,7 @@ const Services = () => {
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                
+
                 {/* Icon */}
                 <div className="absolute top-6 left-6 w-14 h-14 rounded-xl bg-gradient-to-br from-[var(--color-primary)] to-[var(--color-secondary)] flex items-center justify-center text-white shadow-lg">
                   {service.icon}

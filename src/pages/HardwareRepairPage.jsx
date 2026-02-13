@@ -16,7 +16,7 @@ const HardwareRepairPage = () => {
       {/* Hero Section */}
       <ServiceHero
         title={hardwareRepair.title}
-        subtitle="Professional repair solutions for all your IT equipment. Fast, reliable, and affordable."
+        subtitle="Don't replace it if we can fix it. We focus on extending the life of your existing assets, saving you significant capital."
         image="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=1920"
       />
 
@@ -24,8 +24,8 @@ const HardwareRepairPage = () => {
       <ServiceGrid services={hardwareRepair.items} />
 
       {/* Process Timeline */}
-      <ProcessTimeline 
-        steps={hardwareRepair.process} 
+      <ProcessTimeline
+        steps={hardwareRepair.process}
         title="Our Repair Process"
       />
 
@@ -45,7 +45,7 @@ const HardwareRepairPage = () => {
             <p className="text-lg text-[var(--color-text-secondary)] mb-8">
               Quality repairs at competitive prices. No hidden charges.
             </p>
-            
+
             <div className="bg-[var(--color-bg-card)] rounded-2xl p-8 border border-[var(--color-border)] inline-block">
               <p className="text-[var(--color-text-secondary)] mb-2">Starting from</p>
               <p className="text-5xl font-bold gradient-text mb-4">₹500</p>

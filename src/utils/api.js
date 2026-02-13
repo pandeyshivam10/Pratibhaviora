@@ -52,27 +52,51 @@ api.interceptors.response.use(
   }
 );
 
-// API Endpoints (Prepared for backend integration)
-
 /**
- * Submit contact form
+ * Submit contact form using Web3Forms (serverless form submission)
  * @param {Object} formData - Form data to submit
  * @returns {Promise} - API response
  */
 export const submitContactForm = async (formData) => {
-  // TODO: Replace with actual API endpoint when backend is ready
-  // return api.post('/contact', formData);
-  
-  // Temporary: Log form data and simulate success
-  console.log('Contact Form Submitted:', formData);
-  
-  // Simulate API delay
-  await new Promise(resolve => setTimeout(resolve, 1000));
-  
-  return {
-    success: true,
-    message: 'Thank you for contacting us! We will get back to you soon.',
-  };
+  // Web3Forms API endpoint
+  const WEB3FORMS_API = 'https://api.web3forms.com/submit';
+
+  // Web3Forms access key from environment variable
+  const ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_KEY;
+
+  try {
+    const response = await fetch(WEB3FORMS_API, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        access_key: ACCESS_KEY,
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        service: formData.service,
+        message: formData.message,
+        subject: `New Contact Form Submission - ${formData.service}`,
+        from_name: 'Pratibhaviora Website',
+      }),
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      return {
+        success: true,
+        message: 'Thank you for contacting us! We will get back to you soon.',
+      };
+    } else {
+      throw new Error(result.message || 'Form submission failed');
+    }
+  } catch (error) {
+    console.error('Form submission error:', error);
+    throw error;
+  }
 };
 
 /**
@@ -83,10 +107,10 @@ export const submitContactForm = async (formData) => {
 export const submitRepairQuote = async (formData) => {
   // TODO: Replace with actual API endpoint
   // return api.post('/quotes/repair', formData);
-  
+
   console.log('Repair Quote Requested:', formData);
   await new Promise(resolve => setTimeout(resolve, 1000));
-  
+
   return {
     success: true,
     message: 'Quote request received! Our team will contact you shortly.',
@@ -101,10 +125,10 @@ export const submitRepairQuote = async (formData) => {
 export const submitProjectInquiry = async (formData) => {
   // TODO: Replace with actual API endpoint
   // return api.post('/inquiries/project', formData);
-  
+
   console.log('Project Inquiry Submitted:', formData);
   await new Promise(resolve => setTimeout(resolve, 1000));
-  
+
   return {
     success: true,
     message: 'Thank you for your interest! We will schedule a consultation soon.',
@@ -119,10 +143,10 @@ export const submitProjectInquiry = async (formData) => {
 export const subscribeNewsletter = async (email) => {
   // TODO: Replace with actual API endpoint
   // return api.post('/newsletter/subscribe', { email });
-  
+
   console.log('Newsletter Subscription:', email);
   await new Promise(resolve => setTimeout(resolve, 500));
-  
+
   return {
     success: true,
     message: 'Successfully subscribed to our newsletter!',

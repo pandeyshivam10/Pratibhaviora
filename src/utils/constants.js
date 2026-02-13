@@ -1,41 +1,62 @@
 // Company Information
 export const COMPANY = {
   name: 'Pratibhaviora Tech LLP',
-  tagline: 'जहाँ प्रतिभा चनाती है तकनीक',
-  taglineEnglish: 'Where Talent Creates Technology',
-  description: 'Professional technology services company specializing in hardware repair and software development.',
-  
-  // Contact Information (Placeholders)
+  tagline: 'Your Trusted Technology Partner',
+  taglineEnglish: 'Technology That Works as Hard as You Do.',
+  description: 'PRATIBHAVIORA TECH LLP is a professionally managed technology service organization providing complete technical support across Information Technology infrastructure, consumer home appliances, and modern software development.',
+  subDescription: 'When your technology stops, business stops. We are here to ensure that never happens.',
+  motto: 'Technology • Service • Innovation',
+
+  // Contact Information
   contact: {
-    address: 'Sector 10, Gurugram, Haryana - 122001, India',
-    email: 'info@pratibhavioratech.com',
-    supportEmail: 'support@pratibhavioratech.com',
-    phone: '+91 98765 43210',
-    altPhone: '+91 98765 43211',
-    whatsapp: '+919876543210',
+    address: 'Ghaziabad, Uttar Pradesh, India',
+    email: 'pratibhaviora@gmail.com',
+    supportEmail: 'pratibhaviora@gmail.com',
+    phone: '+91-9838644528',
+    altPhone: '+91-9838644528',
+    whatsapp: '+919838644528',
+    website: 'www.pratibhaviora.com',
   },
-  
+
   businessHours: {
-    weekdays: 'Monday - Saturday: 10:00 AM - 7:00 PM',
-    weekend: 'Sunday: Closed',
+    weekdays: 'Monday - Saturday: 9:00 AM - 7:00 PM',
+    weekend: 'Sunday: Emergency Support Only',
   },
-  
+
   social: {
-    facebook: 'https://facebook.com/pratibhavioratech',
-    twitter: 'https://twitter.com/pratibhavioratech',
-    linkedin: 'https://linkedin.com/company/pratibhavioratech',
-    instagram: 'https://instagram.com/pratibhavioratech',
+    facebook: 'https://facebook.com/pratibhaviora',
+    twitter: 'https://twitter.com/pratibhaviora',
+    linkedin: 'https://linkedin.com/company/pratibhaviora',
+    instagram: 'https://instagram.com/pratibhaviora',
   },
+
+  // Vision & Mission
+  vision: 'To become India\'s most trusted technology and service brand, where customers rely on us without hesitation for fast, professional, and consistent quality service nationwide.',
+  mission: [
+    'Deliver quick solutions to reduce downtime',
+    'Use skilled technicians and modern tools',
+    'Provide affordable pricing and transparent communication',
+    'Ensure customer satisfaction after every job',
+  ],
+  coreValues: [
+    { title: 'Integrity', description: 'Honest and ethical business practices' },
+    { title: 'Quality', description: 'High standards in every service' },
+    { title: 'Speed', description: 'Quick response and closure' },
+    { title: 'Commitment', description: 'Taking full responsibility' },
+    { title: 'Innovation', description: 'Using modern technology' },
+    { title: 'Customer First', description: 'Client satisfaction is our priority' },
+  ],
 };
 
 // Navigation Links
 export const NAV_LINKS = [
   { name: 'Home', path: '/' },
-  { 
-    name: 'Services', 
+  {
+    name: 'Services',
     path: '/services',
     children: [
-      { name: 'Hardware Repair', path: '/services/hardware-repair' },
+      { name: 'IT Infrastructure', path: '/services/hardware-repair' },
+      { name: 'Home Appliances', path: '/services/home-appliances' },
       { name: 'Software Development', path: '/services/software-development' },
     ]
   },
@@ -46,71 +67,73 @@ export const NAV_LINKS = [
 // Services Data
 export const SERVICES = {
   hardwareRepair: {
-    title: 'Hardware Repair Services',
-    description: 'Expert repair for laptops, monitors, desktops & all IT equipment',
+    title: 'IT Infrastructure Services',
+    description: 'Reduce downtime and improve productivity with expert IT support',
+    tagline: "Don't replace it if we can fix it.",
+    subDescription: 'We focus on extending the life of your existing assets, saving you significant capital in the long run.',
     icon: 'wrench',
     image: 'https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=800',
     path: '/services/hardware-repair',
     items: [
       {
-        title: 'Laptop Repair',
-        description: 'Screen replacement, keyboard repair, battery replacement, overheating issues, software troubleshooting',
+        title: 'Desktop & Laptop Support',
+        description: 'Motherboard repair, RAM/SSD replacement, OS installation, virus removal, performance optimization, data backup, and troubleshooting',
         image: 'https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600',
         services: [
-          'Screen Replacement',
-          'Keyboard Repair & Replacement',
-          'Battery Replacement',
-          'Overheating Solutions',
           'Motherboard Repair',
-          'Data Recovery',
-        ],
-      },
-      {
-        title: 'Desktop Repair',
-        description: 'Hardware upgrades, component replacement, troubleshooting, performance optimization',
-        image: 'https://images.unsplash.com/photo-1587831990711-23ca6441447b?w=600',
-        services: [
-          'Hardware Upgrades',
-          'Component Replacement',
-          'Performance Optimization',
-          'Virus Removal',
+          'RAM/SSD Replacement',
           'OS Installation',
-          'Custom PC Building',
+          'Virus Removal',
+          'Performance Optimization',
+          'Data Backup & Recovery',
         ],
       },
       {
-        title: 'Monitor Repair',
-        description: 'Display issues, power problems, color correction, backlight repair',
-        image: 'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=600',
-        services: [
-          'Display Issues',
-          'Power Problems',
-          'Color Calibration',
-          'Backlight Repair',
-          'Panel Replacement',
-          'Cable Issues',
-        ],
-      },
-      {
-        title: 'Other Equipment',
-        description: 'Printers, scanners, networking devices, and all IT peripherals',
+        title: 'Printer & Networking',
+        description: 'Printer installation and repair, network cabling and configuration, router and switch setup, Wi-Fi troubleshooting',
         image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600',
         services: [
-          'Printer Repair',
-          'Scanner Repair',
-          'Network Device Setup',
-          'Router Configuration',
-          'Peripheral Repair',
+          'Printer Installation & Repair',
+          'Network Cabling',
+          'Router & Switch Setup',
+          'Wi-Fi Troubleshooting',
+          'Network Configuration',
           'Cable Management',
+        ],
+      },
+      {
+        title: 'CCTV Services',
+        description: 'CCTV installation, monitoring setup, and maintenance for complete security solutions',
+        image: 'https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=600',
+        services: [
+          'CCTV Installation',
+          'Monitoring Setup',
+          'Camera Maintenance',
+          'DVR/NVR Configuration',
+          'Remote Access Setup',
+          'Security Consultation',
+        ],
+      },
+      {
+        title: 'IT AMC & Helpdesk',
+        description: 'Annual Maintenance Contracts for complete IT support throughout the year',
+        image: 'https://images.unsplash.com/photo-1521791136064-7986c2920216?w=600',
+        services: [
+          'Fixed Annual Cost',
+          'Priority Support',
+          'Preventive Maintenance',
+          'Unlimited Breakdown Calls',
+          'Less Downtime',
+          'Better Asset Management',
         ],
       },
     ],
     process: [
-      { step: 1, title: 'Diagnosis', description: 'We thoroughly diagnose the issue with your device' },
-      { step: 2, title: 'Quote', description: 'Receive a transparent and fair price estimate' },
-      { step: 3, title: 'Repair', description: 'Expert technicians repair your device' },
-      { step: 4, title: 'Testing', description: 'Rigorous quality testing before delivery' },
-      { step: 5, title: 'Delivery', description: 'Get your device back in perfect condition' },
+      { step: 1, title: 'Complaint', description: 'Register your issue with our support team' },
+      { step: 2, title: 'Diagnosis', description: 'Expert technicians diagnose the problem' },
+      { step: 3, title: 'Quote', description: 'Transparent pricing with no hidden costs' },
+      { step: 4, title: 'Repair', description: 'Quick and quality repair service' },
+      { step: 5, title: 'Closure', description: 'Testing and delivery with warranty' },
     ],
   },
   softwareDevelopment: {
@@ -201,39 +224,122 @@ export const SERVICES = {
       { step: 7, title: 'Support', description: 'Ongoing maintenance and updates' },
     ],
   },
+  homeAppliances: {
+    title: 'Home Appliance Services',
+    description: 'Expert care for your daily necessities',
+    tagline: 'Same-day or next-day service',
+    subDescription: 'We provide doorstep repair and maintenance for consumer appliances for residential and retail customers. Our technicians carry tools and genuine spare parts to ensure quick repairs.',
+    icon: 'home',
+    image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800',
+    path: '/services/home-appliances',
+    items: [
+      {
+        title: 'LED/LCD/Smart TV Repair',
+        description: 'Expert repair for all types of televisions including LED, LCD, OLED, and Smart TVs',
+        image: 'https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=600',
+        services: [
+          'Display Panel Repair',
+          'Backlight Issues',
+          'Power Problems',
+          'Smart TV Software',
+          'Sound Issues',
+          'Remote Pairing',
+        ],
+      },
+      {
+        title: 'Washing Machine Servicing',
+        description: 'Complete repair and maintenance for all washing machine brands and models',
+        image: 'https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=600',
+        services: [
+          'Drum Issues',
+          'Motor Repair',
+          'Water Leakage',
+          'Spin Problems',
+          'PCB Repair',
+          'Regular Servicing',
+        ],
+      },
+      {
+        title: 'Refrigerator Repair',
+        description: 'Gas charging, compressor repair, and complete refrigerator maintenance',
+        image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=600',
+        services: [
+          'Gas Charging',
+          'Compressor Repair',
+          'Thermostat Issues',
+          'Ice Maker Repair',
+          'Door Seal Replace',
+          'Cooling Problems',
+        ],
+      },
+      {
+        title: 'AC Installation & Maintenance',
+        description: 'Installation, servicing, and repair for all AC types',
+        image: 'https://images.unsplash.com/photo-1631545806609-cc99963d7b3f?w=600',
+        services: [
+          'AC Installation',
+          'Gas Refilling',
+          'Compressor Repair',
+          'Regular Servicing',
+          'PCB Repair',
+          'Cooling Issues',
+        ],
+      },
+      {
+        title: 'Kitchen Appliances',
+        description: 'Microwave, chimney, oven, and other kitchen appliance repairs',
+        image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600',
+        services: [
+          'Microwave Repair',
+          'Chimney Servicing',
+          'Oven Repair',
+          'Mixer Grinder',
+          'Induction Repair',
+          'Water Purifier',
+        ],
+      },
+    ],
+    process: [
+      { step: 1, title: 'Call/Book', description: 'Contact us or book online' },
+      { step: 2, title: 'Technician Visit', description: 'Expert visits your location' },
+      { step: 3, title: 'Diagnosis', description: 'Identify the issue with your appliance' },
+      { step: 4, title: 'Repair', description: 'Quick repair with genuine parts' },
+      { step: 5, title: 'Testing', description: 'Thorough testing before handover' },
+    ],
+  },
 };
 
-// Why Choose Us Benefits
+// Why Choose Us - The Pratibhaviora Advantage
 export const BENEFITS = [
   {
-    icon: 'users',
-    title: 'Expert Technicians',
-    description: 'Certified professionals with years of experience',
+    icon: 'cpu',
+    title: 'Technical Depth',
+    description: 'We understand the electronics inside the box. Our diagnosis is accurate, reducing trial-and-error costs.',
   },
   {
     icon: 'clock',
-    title: 'Quick Turnaround',
-    description: 'Fast repairs without compromising quality',
-  },
-  {
-    icon: 'wallet',
-    title: 'Affordable Pricing',
-    description: 'Competitive rates with no hidden charges',
+    title: 'Response Time',
+    description: 'We know downtime costs money. Our logistics network ensures we reach your site fast.',
   },
   {
     icon: 'shield',
-    title: 'Quality Assurance',
-    description: 'Warranty on all repairs and services',
-  },
-  {
-    icon: 'settings',
-    title: 'Custom Solutions',
-    description: 'Tailored solutions for your unique needs',
+    title: 'Genuine Spares Only',
+    description: 'We never compromise on quality. Original or high-grade compatible parts with warranty support.',
   },
   {
     icon: 'headphones',
-    title: '24/7 Support',
-    description: 'Round-the-clock customer assistance',
+    title: 'Human Support',
+    description: 'No automated bots. When you call us, you talk to a human who understands technical issues.',
+  },
+  {
+    icon: 'wallet',
+    title: 'Transparent Pricing',
+    description: 'No hidden costs. Clear, upfront pricing on every service.',
+  },
+  {
+    icon: 'users',
+    title: 'Skilled Technicians',
+    description: 'Certified engineers with years of experience in IT and home appliance repair.',
   },
 ];
 
@@ -334,4 +440,42 @@ export const PORTFOLIO = [
     description: 'Food ordering and delivery management system',
     image: 'https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=600',
   },
+];
+
+// Service Models - How We Work
+export const SERVICE_MODELS = [
+  {
+    title: 'On-Demand Breakdown Support',
+    bestFor: 'Small offices or individuals',
+    description: 'You face an issue → You call us → We visit and fix it',
+    icon: 'phone',
+    features: [
+      'Transparent, per-visit pricing',
+      'No hidden costs',
+      'Quick response time',
+      'Pay only when you need service',
+    ],
+  },
+  {
+    title: 'Annual Maintenance Contracts (AMC)',
+    bestFor: 'Corporate offices, Schools, and Institutions',
+    description: 'The "Peace of Mind" Plan - For a fixed annual fee, we take complete care of your IT assets',
+    icon: 'file-text',
+    features: [
+      'Unlimited breakdown calls',
+      'Preventive Maintenance Visits (quarterly)',
+      'Priority response time',
+      'Standby backup equipment (optional)',
+      'Fixed annual cost',
+      'Better asset management',
+    ],
+  },
+];
+
+// Why Clients Trust Us
+export const WHY_TRUST_US = [
+  'Professional approach & quick response time',
+  'Skilled and certified engineers',
+  'Transparent pricing & quality assurance',
+  'Long-term support and customized solutions',
 ];

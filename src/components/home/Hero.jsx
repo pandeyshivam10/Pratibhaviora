@@ -15,7 +15,7 @@ const Hero = () => {
           alt="Technology Background"
           className="w-full h-full object-cover"
         />
-        <div 
+        <div
           className="absolute inset-0"
           style={{ background: 'var(--gradient-hero)' }}
         />
@@ -51,8 +51,8 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            Expert hardware repair services and cutting-edge software development solutions 
-            tailored to transform your business and elevate your technology experience.
+            When your technology stops, business stops. We are here to ensure that never happens.
+            Expert IT support, home appliance repair, and software development solutions.
           </motion.p>
 
           {/* CTA Buttons */}

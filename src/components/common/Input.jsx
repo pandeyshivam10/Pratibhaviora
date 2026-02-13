@@ -7,6 +7,7 @@ const Input = forwardRef(({
   type = 'text',
   className = '',
   containerClassName = '',
+  
   ...props
 }, ref) => {
   const baseStyles = `

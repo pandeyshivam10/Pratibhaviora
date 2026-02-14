@@ -1,3 +1,9 @@
+import member1 from '../assets/1.png';
+import member2 from '../assets/2.png';
+import member3 from '../assets/3.png';
+import member4 from '../assets/4.png';
+import member5 from '../assets/5.png';
+
 // Company Information
 export const COMPANY = {
   name: 'Pratibhaviora Tech LLP',
@@ -9,11 +15,12 @@ export const COMPANY = {
 
   // Contact Information
   contact: {
-    address: 'Ghaziabad, Uttar Pradesh, India',
+    address: 'Sarnath, Varansi Uttar Pradesh 221007 | 602 6th floor, madhuban building, 55, Nehru Place, New Delhi, Delhi 110019',
     email: 'pratibhaviora@gmail.com',
     supportEmail: 'pratibhaviora@gmail.com',
     phone: '+91-9838644528',
     altPhone: '+91-9838644528',
+    phone3: '+91-7905492457',
     whatsapp: '+919838644528',
     website: 'www.pratibhaviora.com',
   },
@@ -385,28 +392,34 @@ export const STATS = [
 // Team Members
 export const TEAM = [
   {
-    name: 'Vikram Singh',
+    name: 'Mithlesh Kr Pandey',
     designation: 'Founder & CEO',
-    bio: 'Visionary leader with 10+ years in tech industry',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400',
+    bio: 'Visionary leader driving innovation and business growth',
+    image: member1,
   },
   {
-    name: 'Anil Verma',
-    designation: 'CTO',
-    bio: 'Expert in software architecture and cloud solutions',
-    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400',
+    name: 'Sundaram Pandey',
+    designation: 'Head of Operations (IIT)',
+    bio: 'Managing operations and ensuring smooth execution across teams',
+    image: member3,
   },
   {
-    name: 'Meera Kapoor',
-    designation: 'Head of Operations',
-    bio: 'Ensuring smooth delivery and customer satisfaction',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400',
+    name: 'Shivam Pandey',
+    designation: 'CTO (Engineer)',
+    bio: 'Leading technology, architecture, and product development',
+    image: member2,
   },
   {
-    name: 'Rahul Joshi',
-    designation: 'Lead Developer',
-    bio: 'Full-stack developer passionate about clean code',
-    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400',
+    name: 'Ashutosh Singh',
+    designation: 'Managing Director',
+    bio: 'Driving company growth through strategic planning and operational excellence',
+    image: member5,
+  },
+  {
+    name: 'Satyam Pandey',
+    designation: 'Managing Director (Tech)',
+    bio: 'Leading technology initiatives and developing scalable software solutions',
+    image: member4,
   },
 ];
 

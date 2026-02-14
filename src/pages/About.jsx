@@ -32,7 +32,7 @@ const AnimatedCounter = ({ value, suffix = '', duration = 2 }) => {
     const start = 0;
     const end = value;
     const incrementTime = (duration * 1000) / end;
-    
+
     let current = start;
     const timer = setInterval(() => {
       current += 1;
@@ -63,7 +63,7 @@ const About = () => {
             alt="Team collaboration"
             className="w-full h-full object-cover"
           />
-          <div 
+          <div
             className="absolute inset-0"
             style={{ background: 'var(--gradient-hero)' }}
           />
@@ -96,8 +96,48 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Story */}
+      {/* About Us Section */}
       <section className="py-20 lg:py-28 bg-[var(--color-bg-primary)]">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.h2
+              className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              About <span className="gradient-text">Us</span>
+            </motion.h2>
+            <motion.div
+              className="space-y-6 text-[var(--color-text-secondary)] text-lg leading-relaxed"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+            >
+              <p>
+                Founded with a vision to democratize technology services, Pratibhaviora Tech LLP
+                has grown from a small repair shop to a comprehensive technology solutions provider.
+                Our journey began with a simple belief: quality technology services should be
+                accessible to everyone.
+              </p>
+              <p>
+                Today, we serve businesses and individuals across the region, offering everything
+                from hardware repairs to custom software development. Our team of certified
+                professionals brings years of experience and a passion for technology to every project.
+              </p>
+              <p>
+                We believe in building lasting relationships with our clients through transparency,
+                quality work, and exceptional customer service. When you choose Pratibhaviora,
+                you're not just getting a service provider – you're getting a technology partner.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Founder Section */}
+      <section className="py-20 lg:py-28 bg-[var(--color-bg-secondary)]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -107,41 +147,43 @@ const About = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] mb-6">
-                Our <span className="gradient-text">Story</span>
+                Our <span className="gradient-text">Founder</span>
               </h2>
-              <p className="text-[var(--color-text-secondary)] mb-6 leading-relaxed">
-                Founded with a vision to democratize technology services, Pratibhaviora Tech LLP 
-                has grown from a small repair shop to a comprehensive technology solutions provider. 
-                Our journey began with a simple belief: quality technology services should be 
-                accessible to everyone.
-              </p>
-              <p className="text-[var(--color-text-secondary)] mb-6 leading-relaxed">
-                Today, we serve businesses and individuals across the region, offering everything 
-                from hardware repairs to custom software development. Our team of certified 
-                professionals brings years of experience and a passion for technology to every project.
-              </p>
-              <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                We believe in building lasting relationships with our clients through transparency, 
-                quality work, and exceptional customer service. When you choose Pratibhaviora, 
-                you're not just getting a service provider – you're getting a technology partner.
-              </p>
+              <div className="space-y-4 text-[var(--color-text-secondary)] leading-relaxed">
+                <p>
+                  Mithlesh Kr Pandey is the Founder of Pratibhaviora Tech LLP, a highly experienced professional with over 15+ years of expertise in Service Operations, Customer Experience, and Strategic Leadership. With a strong background in managing large-scale service networks and operations, he has consistently delivered results by building high-performing teams and driving customer-centric growth.
+                </p>
+                <p>
+                  Throughout his career, he has held key leadership roles such as National Head – Service & Operations, Regional Service Manager, and Area Service Manager, where he successfully managed service strategy planning, operational execution, customer satisfaction, and profitability across multiple regions.
+                </p>
+                <p>
+                  His leadership style focuses on innovation, excellence, and continuous improvement, ensuring that every service process meets high standards and delivers outstanding customer experience. With deep knowledge in service management, technical operations, and process optimization, he plays a crucial role in shaping Pratibhaviora Tech LLP’s vision and long-term success.
+                </p>
+                <p>
+                  At Pratibhaviora Tech LLP, Mithlesh Kr Pandey is committed to creating a company culture driven by quality, trust, efficiency, and customer satisfaction, while leading the organization towards sustainable growth and strong market presence.
+                </p>
+              </div>
             </motion.div>
 
             <motion.div
-              className="relative"
+              className="relative flex justify-center"
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <img
-                src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800"
-                alt="Our workspace"
-                className="rounded-2xl shadow-xl"
-              />
-              <div className="absolute -bottom-6 -left-6 bg-[var(--color-bg-card)] rounded-xl p-6 shadow-xl border border-[var(--color-border)]">
-                <p className="text-4xl font-bold gradient-text">5+</p>
-                <p className="text-[var(--color-text-secondary)]">Years of Excellence</p>
+              <div className="relative max-w-sm w-full mx-auto">
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border border-[var(--color-border)]">
+                  <img
+                    src={TEAM[0].image}
+                    alt={TEAM[0].name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="absolute -bottom-6 -right-6 bg-[var(--color-bg-card)] rounded-xl p-6 shadow-xl border border-[var(--color-border)] hidden md:block">
+                  <p className="text-4xl font-bold gradient-text">15+</p>
+                  <p className="text-[var(--color-text-secondary)] text-sm">Years of Experience</p>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -149,7 +191,7 @@ const About = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-20 lg:py-28 bg-[var(--color-bg-secondary)]">
+      <section className="py-20 lg:py-28 bg-[var(--color-bg-primary)]">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
             className="text-center max-w-3xl mx-auto mb-16"
@@ -262,7 +304,7 @@ const About = () => {
           </motion.div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {TEAM.map((member, index) => (
+            {TEAM.slice(1).map((member, index) => (
               <motion.div
                 key={index}
                 className="group bg-[var(--color-bg-card)] rounded-2xl overflow-hidden border border-[var(--color-border)]"
@@ -276,7 +318,7 @@ const About = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
@@ -285,7 +327,7 @@ const About = () => {
                   <h3 className="text-xl font-semibold text-[var(--color-text-primary)] mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-[var(--color-primary)] font-medium mb-3">
+                  <p className="text-[var(--color-primary)] font-medium mb-3 text-xs md:text-sm whitespace-nowrap overflow-hidden text-ellipsis px-2" title={member.designation}>
                     {member.designation}
                   </p>
                   <p className="text-sm text-[var(--color-text-secondary)]">

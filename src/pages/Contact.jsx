@@ -68,9 +68,9 @@ const Contact = () => {
       setSubmitStatus({ type: 'success', message: response.message });
       reset();
     } catch (error) {
-      setSubmitStatus({ 
-        type: 'error', 
-        message: 'Something went wrong. Please try again later.' 
+      setSubmitStatus({
+        type: 'error',
+        message: 'Something went wrong. Please try again later.'
       });
     } finally {
       setIsSubmitting(false);
@@ -78,22 +78,29 @@ const Contact = () => {
   };
 
   const contactInfo = [
-    {
-      icon: <MapPinIcon />,
-      title: 'Visit Us',
-      content: COMPANY.contact.address,
-    },
+    ...(COMPANY.contact.address.includes('|')
+      ? COMPANY.contact.address.split('|').map((addr, i) => ({
+        icon: <MapPinIcon />,
+        title: i === 0 ? 'Varanasi Office' : 'Delhi Office',
+        content: addr.trim(),
+      }))
+      : [{
+        icon: <MapPinIcon />,
+        title: 'Visit Us',
+        content: COMPANY.contact.address,
+      }]
+    ),
     {
       icon: <PhoneIcon />,
       title: 'Call Us',
       content: (
         <>
-          <a href={`tel:${COMPANY.contact.phone}`} className="hover:text-[var(--color-primary)] transition-colors">
-            {COMPANY.contact.phone}
-          </a>
-          <br />
           <a href={`tel:${COMPANY.contact.altPhone}`} className="hover:text-[var(--color-primary)] transition-colors">
             {COMPANY.contact.altPhone}
+          </a>
+          <br />
+          <a href={`tel:${COMPANY.contact.phone3}`} className="hover:text-[var(--color-primary)] transition-colors">
+            {COMPANY.contact.phone3}
           </a>
         </>
       ),
@@ -105,10 +112,6 @@ const Contact = () => {
         <>
           <a href={`mailto:${COMPANY.contact.email}`} className="hover:text-[var(--color-primary)] transition-colors">
             {COMPANY.contact.email}
-          </a>
-          <br />
-          <a href={`mailto:${COMPANY.contact.supportEmail}`} className="hover:text-[var(--color-primary)] transition-colors">
-            {COMPANY.contact.supportEmail}
           </a>
         </>
       ),
@@ -136,7 +139,7 @@ const Contact = () => {
             alt="Contact us"
             className="w-full h-full object-cover"
           />
-          <div 
+          <div
             className="absolute inset-0"
             style={{ background: 'var(--gradient-hero)' }}
           />
@@ -190,7 +193,7 @@ const Contact = () => {
                     label="Email Address"
                     type="email"
                     placeholder="john@example.com"
-                    {...register('email', { 
+                    {...register('email', {
                       required: 'Email is required',
                       pattern: {
                         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
@@ -241,11 +244,10 @@ const Contact = () => {
 
                 {submitStatus && (
                   <motion.div
-                    className={`p-4 rounded-lg ${
-                      submitStatus.type === 'success'
-                        ? 'bg-[var(--color-success)]/10 text-[var(--color-success)]'
-                        : 'bg-[var(--color-error)]/10 text-[var(--color-error)]'
-                    }`}
+                    className={`p-4 rounded-lg ${submitStatus.type === 'success'
+                      ? 'bg-[var(--color-success)]/10 text-[var(--color-success)]'
+                      : 'bg-[var(--color-error)]/10 text-[var(--color-error)]'
+                      }`}
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                   >

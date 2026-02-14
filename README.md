@@ -117,9 +117,9 @@ Edit `src/utils/constants.js` to update:
 
 ## 📞 Contact
 
-- **Email:** info@pratibhavioratech.com
-- **Phone:** +91 98765 43210
-- **Address:** Sector 10, Gurugram, Haryana
+- **Email:** pratibhaviora@gmail.com
+- **Phone:** +91 9838644528
+- **Address:** Varanasi, Uttar Pradesh
 
 ## 📄 License
 

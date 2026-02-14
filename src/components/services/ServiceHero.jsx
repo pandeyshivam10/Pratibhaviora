@@ -7,10 +7,10 @@ const ServiceHero = ({ title, subtitle, image }) => {
       <div className="absolute inset-0 z-0">
         <img
           src={image}
-          alt={title}
+          alt={`${title} - Pratibhaviora Tech LLP Service`}
           className="w-full h-full object-cover"
         />
-        <div 
+        <div
           className="absolute inset-0"
           style={{ background: 'var(--gradient-hero)' }}
         />

@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <img
           src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1920"
-          alt="Technology Background"
+          alt="Pratibhaviora Tech LLP - Technology Infrastructure and Software Solutions"
           className="w-full h-full object-cover"
         />
         <div

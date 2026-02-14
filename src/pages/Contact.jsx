@@ -7,6 +7,7 @@ import Button from '../components/common/Button';
 import Input from '../components/common/Input';
 import { COMPANY } from '../utils/constants';
 import { submitContactForm } from '../utils/api';
+import useSEO from '../hooks/useSEO';
 
 // Icons
 const MapPinIcon = () => (
@@ -81,7 +82,7 @@ const Contact = () => {
     ...(COMPANY.contact.address.includes('|')
       ? COMPANY.contact.address.split('|').map((addr, i) => ({
         icon: <MapPinIcon />,
-        title: i === 0 ? 'Varanasi Office' : 'Delhi Office',
+        title: i === 0 ? 'Head Office' : 'Branch Office',
         content: addr.trim(),
       }))
       : [{

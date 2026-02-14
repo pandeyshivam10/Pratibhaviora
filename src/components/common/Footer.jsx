@@ -136,9 +136,24 @@ const Footer = () => {
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
-                <span className="text-[var(--color-text-secondary)]">
-                  {COMPANY.contact.address}
-                </span>
+                <div className="flex flex-col gap-3">
+                  {COMPANY.contact.address.includes('|') ? (
+                    COMPANY.contact.address.split('|').map((addr, i) => (
+                      <div key={i} className="space-y-1">
+                        <span className="text-[var(--color-primary)] font-semibold block text-xs uppercase tracking-wider">
+                          {i === 0 ? 'Head Office' : 'Branch Office'}
+                        </span>
+                        <span className="text-[var(--color-text-secondary)]">
+                          {addr.trim()}
+                        </span>
+                      </div>
+                    ))
+                  ) : (
+                    <span className="text-[var(--color-text-secondary)]">
+                      {COMPANY.contact.address}
+                    </span>
+                  )}
+                </div>
               </li>
               <li className="flex items-center gap-3 text-sm">
                 <svg className="w-5 h-5 text-[var(--color-primary)] flex-shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

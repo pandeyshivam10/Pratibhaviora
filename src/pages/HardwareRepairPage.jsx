@@ -6,8 +6,13 @@ import ServiceGrid from '../components/services/ServiceGrid';
 import ProcessTimeline from '../components/services/ProcessTimeline';
 import Button from '../components/common/Button';
 import { SERVICES } from '../utils/constants';
+import useSEO from '../hooks/useSEO';
 
 const HardwareRepairPage = () => {
+  useSEO({
+    title: 'Hardware Repair Services',
+    description: 'Professional hardware repair services for laptops, desktops, and printers. Expert technicians, quick turnaround, and genuine spare parts at Pratibhaviora Tech LLP.'
+  });
   const navigate = useNavigate();
   const { hardwareRepair } = SERVICES;
 

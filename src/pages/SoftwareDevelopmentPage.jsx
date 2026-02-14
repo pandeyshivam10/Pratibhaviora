@@ -8,8 +8,13 @@ import TechStack from '../components/services/TechStack';
 import Portfolio from '../components/services/Portfolio';
 import Button from '../components/common/Button';
 import { SERVICES } from '../utils/constants';
+import useSEO from '../hooks/useSEO';
 
 const SoftwareDevelopmentPage = () => {
+  useSEO({
+    title: 'Software Development Solutions',
+    description: 'Custom software development, web applications, and mobile app development. Transform your business with scalable and innovative digital solutions from Pratibhaviora Tech LLP.'
+  });
   const navigate = useNavigate();
   const { softwareDevelopment } = SERVICES;
 
@@ -23,8 +28,8 @@ const SoftwareDevelopmentPage = () => {
       />
 
       {/* Services Grid */}
-      <ServiceGrid 
-        services={softwareDevelopment.items} 
+      <ServiceGrid
+        services={softwareDevelopment.items}
         showTechnologies={true}
       />
 
@@ -32,8 +37,8 @@ const SoftwareDevelopmentPage = () => {
       <TechStack technologies={softwareDevelopment.techStack} />
 
       {/* Process Timeline */}
-      <ProcessTimeline 
-        steps={softwareDevelopment.process} 
+      <ProcessTimeline
+        steps={softwareDevelopment.process}
         title="Development Process"
       />
 

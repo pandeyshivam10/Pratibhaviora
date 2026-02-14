@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import PageTransition from '../components/common/PageTransition';
 import { COMPANY, STATS, TEAM } from '../utils/constants';
+import useSEO from '../hooks/useSEO';
 
 // Animated Counter Component
 const AnimatedCounter = ({ value, suffix = '', duration = 2 }) => {

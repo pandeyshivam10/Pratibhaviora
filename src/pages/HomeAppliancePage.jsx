@@ -6,8 +6,13 @@ import ServiceGrid from '../components/services/ServiceGrid';
 import ProcessTimeline from '../components/services/ProcessTimeline';
 import Button from '../components/common/Button';
 import { SERVICES } from '../utils/constants';
+import useSEO from '../hooks/useSEO';
 
 const HomeAppliancePage = () => {
+    useSEO({
+        title: 'Home Appliance Repair',
+        description: 'Expert doorstep repair for ACs, washing machines, refrigerators, and more. Fast, reliable, and affordable home appliance service by Pratibhaviora Tech LLP.'
+    });
     const navigate = useNavigate();
     const { homeAppliances } = SERVICES;
 

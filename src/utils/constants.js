@@ -15,7 +15,7 @@ export const COMPANY = {
 
   // Contact Information
   contact: {
-    address: 'Sarnath, Varansi Uttar Pradesh 221007 | 602 6th floor, madhuban building, 55, Nehru Place, New Delhi, Delhi 110019',
+    address: 'Sarnath, Varanasi Uttar Pradesh 221007 | 602 6th floor, madhuban building, 55, Nehru Place, New Delhi, Delhi 110019',
     email: 'pratibhaviora@gmail.com',
     supportEmail: 'pratibhaviora@gmail.com',
     phone: '+91-9838644528',
@@ -58,6 +58,7 @@ export const COMPANY = {
 // Navigation Links
 export const NAV_LINKS = [
   { name: 'Home', path: '/' },
+  { name: 'About Us', path: '/about' },
   {
     name: 'Services',
     path: '/services',
@@ -67,8 +68,7 @@ export const NAV_LINKS = [
       { name: 'Software Development', path: '/services/software-development' },
     ]
   },
-  { name: 'About', path: '/about' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Contact Us', path: '/contact' },
 ];
 
 // Services Data

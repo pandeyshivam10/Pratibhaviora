@@ -140,10 +140,10 @@ const About = () => {
       {/* Founder Section */}
       <section className="py-20 lg:py-28 bg-[var(--color-bg-secondary)]">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="max-w-4xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
@@ -166,6 +166,7 @@ const About = () => {
               </div>
             </motion.div>
 
+            {/* Founder Photo - Commented out as requested
             <motion.div
               className="relative flex justify-center"
               initial={{ opacity: 0, x: 30 }}
@@ -187,6 +188,7 @@ const About = () => {
                 </div>
               </div>
             </motion.div>
+            */}
           </div>
         </div>
       </section>
@@ -286,7 +288,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
+      {/* Meet Our Team Section - Commented out as requested
       <section className="py-20 lg:py-28 bg-[var(--color-bg-primary)]">
         <div className="container mx-auto px-4 lg:px-8">
           <motion.div
@@ -340,6 +342,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      */}
     </PageTransition>
   );
 };

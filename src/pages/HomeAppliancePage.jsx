@@ -22,7 +22,7 @@ const HomeAppliancePage = () => {
             <ServiceHero
                 title={homeAppliances.title}
                 subtitle="Expert care for your daily necessities. Same-day or next-day doorstep service with genuine spare parts."
-                image="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=1920"
+                image="https://plus.unsplash.com/premium_photo-1683134512538-7b390d0adc9e?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
 
             {/* Services Grid */}
